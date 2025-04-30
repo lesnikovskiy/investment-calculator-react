@@ -15,6 +15,8 @@ export default function UserInput() {
     }));
   }
 
+  console.log(JSON.stringify(userInput));
+
   return (
     <section id="user-input">
       <div className="input-group">
@@ -24,7 +26,7 @@ export default function UserInput() {
             type="number"
             id="initial-investment"
             required
-            defaultValue={userInput.initialInvestment}
+            value={userInput.initialInvestment}
             onChange={(e) => handleChange('initialInvestment', e.target.value)}
           />
         </p>
@@ -34,7 +36,7 @@ export default function UserInput() {
             type="number"
             id="annual-investment"
             required
-            defaultValue={userInput.annualInvestment}
+            value={userInput.annualInvestment}
             onChange={(e) => handleChange('annualInvestment', e.target.value)}
           />
         </p>
@@ -46,7 +48,7 @@ export default function UserInput() {
             type="number"
             id="expected-return"
             required
-            defaultValue={userInput.expectedReturn}
+            value={userInput.expectedReturn}
             onChange={(e) => handleChange('expectedReturn', e.target.value)}
           />
         </p>
@@ -56,7 +58,7 @@ export default function UserInput() {
             type="number"
             id="duration"
             required
-            defaultValue={userInput.duration}
+            value={userInput.duration}
             onChange={(e) => handleChange('duration', e.target.value)}
           />
         </p>
